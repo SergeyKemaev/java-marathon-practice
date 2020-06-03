@@ -31,5 +31,6 @@ public class Application {
 
         // Вывести человек с фото и другом
         // Решение присылайте на sergey.kemaev@gmail.com
+
     }
 }
