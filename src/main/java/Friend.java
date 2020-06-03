@@ -6,6 +6,6 @@ public class Friend {
     }
 
     public String toString() {
-        return "Друг. Name: " + this.name;
+        return "Друг. Имя: " + this.name;
     }
 }
