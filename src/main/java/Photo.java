@@ -8,6 +8,6 @@ public class Photo {
     }
 
     public String toString() {
-        return "Фото. Name: " + this.name + ", URL: " + this.url;
+        return "Фото. Название: " + this.name + ", Ссылка: " + this.url;
     }
 }
