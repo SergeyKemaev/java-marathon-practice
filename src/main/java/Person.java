@@ -1,11 +1,13 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public class Person {
 
     private String id;
     private String name;
-    private Friend friend;
-    private Photo photo;
+
+    private List<Friend> friends = new ArrayList<>();
+    private List<Photo> photos = new ArrayList<>();
 
     // основные модификаторы доступа: public, private
     public Person(String newId, String newName) {
@@ -19,8 +21,8 @@ public class Person {
         return name;
     }
 
-    public void setFriend(Friend friend) {
-        this.friend = friend;
+    public void addFriend(Friend friend) {
+        this.friends.add(friend);
     }
 
     // Переопределяем стандартный метод
@@ -36,19 +38,19 @@ public class Person {
         // дописать инфу о друге к personInfo
 
         String personInfo = "Person. Id: " + this.id + ", Name: " + this.name;
-        // Если переменная friend инициализирована (есть значение)
-        if (this.friend != null) { // Если (условие)
+        // Если переменная friends инициализирована (есть значение) и список друзей не пустой
+        if (friends != null && !friends.isEmpty()) { // Если (условие)
             // если условие выполнится, то заходим сюда
             // personInfo + информация о друге
-            personInfo = personInfo + ", Friend: " + this.friend;
+            personInfo = personInfo + ", Friends: " + this.friends;
         } else { // Иначе
             // если НЕ выполнится, то заходим сюда
             // personInfo + "нет друзей"
             personInfo = personInfo + ", нет друзей";
         }
 
-        if (this.photo != null) {
-            personInfo = personInfo + ", Фото: " + this.photo;
+        if (this.photos != null) {
+            personInfo = personInfo + ", Фото: " + this.photos;
         } else {
             personInfo = personInfo + ", нет фото";
         }
