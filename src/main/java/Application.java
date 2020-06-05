@@ -16,6 +16,11 @@ public class Application {
         pers.addFriend(friend);
         System.out.println("Это человек с другом. " + pers);
 
+        Photo photo = new Photo("It's me", "https://vk.com/photos/my_photo.jpg");
+        pers.addPhoto(photo);
+
+        System.out.println("Это человек с другом и фото. " + pers);
+
         // Массив - array
         // Collection
 

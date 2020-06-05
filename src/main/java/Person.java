@@ -1,5 +1,7 @@
 import java.util.ArrayList;
+import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.Set;
 
 public class Person {
 
@@ -7,7 +9,7 @@ public class Person {
     private String name;
 
     private List<Friend> friends = new ArrayList<>();
-    private List<Photo> photos = new ArrayList<>();
+    private Set<Photo> photos = new LinkedHashSet<>();
 
     // основные модификаторы доступа: public, private
     public Person(String newId, String newName) {
@@ -23,6 +25,9 @@ public class Person {
 
     public void addFriend(Friend friend) {
         this.friends.add(friend);
+    }
+    public void addPhoto(Photo photo) {
+        this.photos.add(photo);
     }
 
     // Переопределяем стандартный метод
@@ -49,7 +54,7 @@ public class Person {
             personInfo = personInfo + ", нет друзей";
         }
 
-        if (this.photos != null) {
+        if (this.photos != null && !photos.isEmpty()) {
             personInfo = personInfo + ", Фото: " + this.photos;
         } else {
             personInfo = personInfo + ", нет фото";
