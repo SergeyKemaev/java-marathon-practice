@@ -18,6 +18,9 @@ public class Person {
         this.name = newName; // задаем имя
     }
 
+    public String getId() {
+        return id;
+    }
     // get<Имя поля>
     public String getName() {
         return name;
